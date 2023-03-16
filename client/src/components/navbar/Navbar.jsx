@@ -41,10 +41,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
-        <NavLink to="/">
-          <img src={Logo} alt="" className="navbar__logo" />
-        </NavLink>
-
+        <img src={Logo} alt="" className="navbar__logo" />
         <div className="navbar__header">MERN CLOUD</div>
         {isAuth && (
           <input

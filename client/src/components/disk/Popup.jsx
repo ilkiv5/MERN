@@ -3,8 +3,6 @@ import Input from "../input/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { setPopupDisplay } from "../../reducers/fileReducer";
 import { createDir } from "../../actions/file";
-import crossIcon from "../../assets/img/cross.svg";
-import { Button } from "../UI/button/Button";
 
 const Popup = () => {
   const [dirName, setDirName] = useState("");
@@ -28,7 +26,7 @@ const Popup = () => {
             className="popup__close"
             onClick={() => dispatch(setPopupDisplay("none"))}
           >
-            <img src={crossIcon} alt="" />
+            X
           </button>
         </div>
         <Input
@@ -37,11 +35,9 @@ const Popup = () => {
           value={dirName}
           setValue={setDirName}
         />
-        <div className="popup__create">
-          <Button subClassName="blue" onClick={() => createHandler()}>
-            Create
-          </Button>
-        </div>
+        <button className="popup__create" onClick={() => createHandler()}>
+          Create
+        </button>
       </div>
     </div>
   );

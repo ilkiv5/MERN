@@ -73,7 +73,6 @@ const Disk = () => {
         <button className="disk__back" onClick={() => backClickHandler()}>
           <img src={BackIcon} alt="" />
         </button>
-        <div className="create__dir">
         <Button
           className="disk__create"
           subClassName="green"
@@ -81,8 +80,6 @@ const Disk = () => {
         >
           Create directory
         </Button>
-        </div>
-
         <div className="disk__upload">
           <label htmlFor="disk__upload-input" className="disk__upload-label">
             Download file

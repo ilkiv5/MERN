@@ -12,7 +12,7 @@ const File = require("../models/File");
 router.post(
   "/registration",
   [
-    check("email", "Incorrect email").isEmail(),
+    check("email", "Uncorrect email").isEmail(),
     check(
       "password",
       "Password must be longed than 3 and shorted than 12"
@@ -22,7 +22,7 @@ router.post(
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ message: "Incorrect request", errors });
+        return res.status(400).json({ message: "Uncorrect request", errors });
       }
 
       const { email, password } = req.body;
