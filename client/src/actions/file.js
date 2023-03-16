@@ -35,6 +35,8 @@ export function getFiles(dirId, sort) {
 export function createDir(dirId, name) {
   return async (dispatch) => {
     try {
+      console.log(name)
+
       const response = await axios.post(
         `${API_URL}api/files`,
         { name, parent: dirId, type: "dir" },
