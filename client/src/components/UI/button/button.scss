@@ -1,54 +1,27 @@
-@import "../../../scss/mixins/button.mixins";
-
-.button.green {
-  @include styled-button;
-  background-color: #27ae60;
-  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
-}
-
-.button.green {
-  &:hover {
-    @include styled-button-hover;
-    background-color: #1e8449;
-    box-shadow: rgba(39, 174, 96, 0.2) 0 6px 12px;
-  }
-}
-
-.button.green,
 .button.red,
+.button.green,
 .button.blue {
-  &:active {
-    transform: translateY(2px);
-    transition-duration: 0.35s;
-  }
+  background: transparent;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #FFFFFF;
+
 }
 
-.button.blue {
-  @include styled-button;
-
-  background-color: cornflowerblue;
-  box-shadow: rgba(39, 93, 174, 0.15) 0 4px 9px;
-}
-
-.button.blue {
-  &:hover {
-    @include styled-button-hover;
-    background-color: #1e6084;
-    box-shadow: rgba(25, 52, 124, 0.2) 0 6px 12px;
-  }
+.button.green {
+  background: #FF4742;
+  border: 1px solid #FF4742;
 }
 
 .button.red {
-  @include styled-button;
-  background-color: #d21f2d;
-  box-shadow: rgba(225, 65, 80, 0.15) 0 4px 9px;
-  color: #fff;
+  background: #FF4742;
+  border: 1px solid #FF4742;
 }
 
-.button.red {
-  &:hover {
-    @include styled-button-hover;
-    background-color: #651414;
-    box-shadow: rgba(25, 52, 124, 0.2) 0 6px 12px;
-  }
+.button.blue {
+  background: #4252ff;
+  border: 1px solid #4268ff;
 }
+

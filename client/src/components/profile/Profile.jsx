@@ -1,6 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteAvatar, uploadAvatar } from "../../actions/user";
+import './profile.scss';
+import { Button } from "../UI/button/Button";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const Profile = () => {
 
   return (
     <div>
-      <button onClick={() => dispatch(deleteAvatar())}>delete avatar</button>
+      <Button subClassName="red" onClick={() => dispatch(deleteAvatar())}>delete avatar</Button>
       <input
         accept="image/*"
         onChange={(e) => changeHandler(e)}
